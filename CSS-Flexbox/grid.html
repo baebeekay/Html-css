@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grid</title>
+</head>
+<style>
+  header a {
+    color: black;
+    text-align: center;
+    padding: 12px;
+    margin: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+  }
+
+  header a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    display: grid;
+    background-color: black;
+    gap: 20px;
+    grid-template-areas:
+      'r r o'
+      'g b b'
+    ;
+    margin: auto;
+
+    width: 80%;
+    height: 100vh;
+  }
+
+  #red {
+    background-color: red;
+    grid-area: r;
+    padding: 50px;
+    margin-top: 1cm;
+    margin-left: 1.5cm;
+
+  }
+
+  #orange {
+    background-color: orange;
+    grid-area: o;
+    padding: 50px;
+    margin-top: 1cm;
+    margin-right: 2cm;
+  }
+
+  #green {
+    background-color: rgb(20, 151, 15);
+    grid-area: g;
+    padding: 50px;
+    margin-left: 1.5cm;
+    margin-bottom: 1cm;
+  }
+
+  .blue {
+    margin-right: 2cm;
+    grid-area: b;
+    margin-bottom: 1cm;
+    display: grid;
+    gap: 20px;
+  }
+
+  #top-blue {
+    background-color: rgb(94, 142, 205);
+    padding: 20px;
+  }
+
+  #bottom-blue {
+    background-color: rgb(94, 142, 205);
+    padding: 30px;
+  }
+</style>
+
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Flex Layout</a>
+    </nav>
+  </header>
+  <div class="container">
+
+    <div id="red"> </div>
+    <div id="orange"> </div>
+    <div id="green"> </div>
+    <div class="blue">
+      <div id="top-blue"> </div>
+      <div id="bottom-blue"> </div>
+    </div>
+  </div>
+</body>
+
+</html>
