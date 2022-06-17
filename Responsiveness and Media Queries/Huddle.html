@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Poppins" />
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Open+Sans">
+    <link rel="icon" type="images/png" href="favicon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Huddle</title>
+</head>
+<style>
+    /*
+    # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Pink: hsl(322, 100%, 66%)
+
+### Neutral
+
+- Very Pale Cyan: hsl(193, 100%, 96%)
+- Very Dark Cyan: hsl(192, 100%, 9%)
+- Grayish Blue: hsl(208, 11%, 55%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 18px
+
+### Headings
+
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 600
+
+### Body, Call-to-actions
+
+- Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
+- Weights: 400, 700
+
+## Icons
+
+For the social icons, you can use a font icon library. Some suggestions can be found below:
+
+- [Font Awesome](https://fontawesome.com/)
+- [IcoMoon](https://icomoon.io/)
+- [Ionicons](https://ionicons.com/)
+*/
+    body {
+        margin: 0;
+        font-size: 18px;
+        background-color: rgb(255, 255, 255);
+        box-sizing: border-box;
+        position: relative;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+    }
+
+    h2,
+    h4 {
+        color: hsl(192, 100%, 9%);
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+    }
+
+    p,
+    ul {
+        color: hsl(208, 11%, 55%);
+    }
+
+    li:hover {
+        text-decoration: underline;
+    }
+
+    footer {
+        background-color: hsl(192, 100%, 9%);
+        color: white;
+        padding: 30px;
+
+    }
+
+    header {
+        background-color: hsl(193, 100%, 96%);
+        background-image: url(bg-hero-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        padding: 50px;
+
+    }
+
+    #container {
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .grow {
+        width: 70%;
+        display: flex;
+        padding: 50px;
+        background-color: white;
+        margin: auto;
+        border: 2px;
+        border-color: aliceblue;
+        border-style: solid;
+        border-radius: 10px;
+    }
+
+    .flow {
+        width: 70%;
+        display: flex;
+        padding: 50px;
+        border-radius: 10px;
+        background-color: white;
+        border: 2px;
+        border-color: aliceblue;
+        border-style: solid;
+        margin: auto;
+    }
+
+    .flow div {
+        margin-left: 1cm;
+    }
+
+    .users {
+        width: 70%;
+        display: flex;
+        padding: 50px;
+        background-color: white;
+        margin: auto;
+        border: 2px;
+        border-color: aliceblue;
+        border-style: solid;
+        border-radius: 10px;
+    }
+
+    .a {
+        float: right;
+        background-color: white;
+        padding: 10px;
+        padding-left: 1cm;
+        padding-right: 1cm;
+        border-radius: 20px;
+        border-style: none;
+        opacity: 1;
+    }
+
+    .a:hover {
+        opacity: 0.7;
+    }
+
+    .top {
+        display: flex;
+        gap: 30px;
+    }
+
+    .b {
+        padding: 10px;
+        color: white;
+        padding-left: 0.5cm;
+        padding-right: 0.5cm;
+        background-color: hsl(322, 100%, 66%);
+        border-style: none;
+        border-radius: 20px;
+        border: 20px;
+    }
+
+    .b:hover {
+        opacity: 0.5;
+    }
+
+    .head {
+        margin-top: 2cm;
+        width: 40%;
+    }
+
+    .float {
+        margin-top: 2cm;
+        width: 30%;
+        margin: auto;
+
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        z-index: 1;
+        padding: 50px;
+        border: 2px;
+        border-color: aliceblue;
+        border-style: solid;
+
+        border-radius: 10px;
+
+    }
+
+    .bottom {
+        display: flex;
+        gap: 50px;
+    }
+
+    .content {
+        width: 30%;
+       margin-top: 1cm;
+
+    }
+
+    #row {
+        display: flex;
+    }
+
+    .text {
+        text-align: right;
+    }
+
+    .icon {
+        margin-top: 1cm;
+        text-align: left;
+        align-content: flex-start;
+    }
+
+    .row {
+        display: flex;
+    }
+
+    .icon:hover {
+        color: hsl(322, 100%, 66%);
+    }
+
+    @media screen and (max-width: px) and (m) {
+        body {
+            width: 50%;
+        }
+
+        header {
+            background-color: hsl(193, 100%, 96%);
+            background-image: url(bg-hero-desktop.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            padding: 50px;
+
+        }
+
+
+    }
+
+    @media screen and (max-width: 375px) {
+        header {
+
+            background-image: url(bg-hero-mobile.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            width: 100%;
+
+        }
+
+        main {
+            width: 100%;
+        }
+
+        .grow {
+            flex-direction: column-reverse;
+        }
+
+        .users {
+            flex-direction: column-reverse;
+        }
+
+        .flow {
+            flex-direction: column;
+        }
+
+        div {
+            width: 100%;
+        }
+
+        footer {
+            width: 100%;
+
+        }
+
+        body {
+            width: 100%;
+        }
+
+        .top {
+
+            flex-direction: column;
+        }
+
+        .bottom {
+            flex-direction: column;
+        }
+
+        #row {
+            margin: auto;
+        }
+
+        .text {
+            text-align: center;
+        }
+
+        ul {
+            margin: 0;
+        }
+
+        .a {
+            margin-left: 20px;
+        }
+
+        .head {
+            width: 100%;
+        }
+
+        .img {
+            width: 100%;
+            height: 300px;
+        }
+
+        .content {
+            margin: 0;
+            padding: 0;
+        }
+
+    }
+</style>
+
+<body>
+    <header>
+        <div>
+            <button class="a">Try it free</button>
+
+
+        </div>
+        <div><img src="logo.svg" alt="logo"></div>
+
+
+        <div class="top">
+            <div class="head">
+                <h2>Build The Community Your Fans Will Love</h2>
+                <p>Huddle re-imagines the way we buid coommunities. You have a voice, but so does your audience. Create
+                    connections with your users as you engage in genuine discussion.</p>
+                <button class="b">Get Started For Free</button>
+            </div>
+            <div> <img src="illustration-mockups.svg" class="img" alt="mockups" width="600" height="400"> </div>
+        </div>
+    </header>
+    <main>
+        <div id="container">
+            <div class="grow">
+                <div>
+                    <h4>Grow Together</h4>
+                    <p>Generate meaningful discussions with your audience and build a strong, loyal community. Think of
+                        the insightful conversations you miss out on with a feedback form.</p>
+                </div>
+                <img src="illustration-grow-together.svg" width="200" height="200" alt="grow">
+            </div>
+            <div class="flow">
+                <img src="illustration-flowing-conversation.svg" width="200" height="200" alt="grow">
+                <div>
+                    <h4>Flowing conversations</h4>
+                    <p>you wouldn't paginate a conversation in real life, so why do it online? Our threads have
+                        just-in-time loading for a more natural flow. </p>
+                </div>
+            </div>
+            <div class="users">
+                <div>
+                    <h4>Your Users</h4>
+                    <p>It takes no time at all to integrate Huddle with your app's authentication solution. This means,
+                        once signed in to your apps, your user can start chatting immediately.</p>
+                </div>
+                <img src="illustration-your-users.svg" width="200" height="200" alt="grow">
+            </div>
+
+        </div>
+
+    </main>
+    <div class="float">
+        <h4>Ready To Buid Your Community?</h4>
+        <button class="b">Get Started For Free</button>
+    </div>
+
+    <footer>
+
+        <div>
+            <img src="footLogo.svg" alt="logo">
+        </div>
+        <div>
+            <div class="bottom">
+                <div class="content">
+
+
+                    <p> <img src="icon-location.svg" alt="location"> Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. </p>
+
+                    <p><img src="icon-phone.svg" alt="phone"> +1-543-123-4567</p>
+                    <p><img src="icon-email.svg" alt="email">example@huddle.com</p>
+                </div>
+                <div class="content">
+                    <ul>
+                        <li>About Us</li>
+                        <li>What We Do</li>
+                        <li>FAQ</li>
+                    </ul>
+                </div>
+                <div class="content">
+                    <ul>
+                        <li>Career</li>
+                        <li>Blog</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+
+                <div class="content" id="row">
+                    <div><i class="fa fa-fw fa-facebook icon"></i></div>
+                    <div><i class="fa fa-fw fa-twitter icon"></i></div>
+                    <div><i class="fa fa-fw fa-instagram icon"></i></div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <p class="text"><small>@Copyright2018Huddle. All rights reserved</small></p>
+    </footer>
+</body>
+
+</html>
