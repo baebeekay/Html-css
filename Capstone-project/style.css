@@ -1,0 +1,323 @@
+/* Layout
+The designs were created to the following widths:
+- Mobile: 375px
+- Desktop: 1440px
+
+Colors
+
+Primary
+- Dark Blue (intro and email sign up background): hsl(217, 28%, 15%)
+- Dark Blue (main background): hsl(218, 28%, 13%)
+- Dark Blue (footer background): hsl(216, 53%, 9%)
+- Dark Blue (testimonials background): hsl(219, 30%, 18%)
+
+Accent
+- Cyan (inside call-to-action gradient): hsl(176, 68%, 64%)
+- Blue (inside call-to-action gradient): hsl(198, 60%, 50%)
+- Light Red (error): hsl(0, 100%, 63%)
+
+Neutral
+- White: hsl(0, 0%, 100%)
+Body Copy
+- Font size: 14px
+
+Headings, Call-to-actions, Header Navigation
+- Family: [Raleway](https://fonts.google.com/specimen/Raleway)
+- Weights: 400, 700
+
+Body
+- Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
+- Weights: 400, 700
+
+Icons
+For the social icons, you can use a font icon library. Some suggestions can be found below:
+- [Font Awesome](https://fontawesome.com/)
+- [IcoMoon](https://icomoon.io/)
+- [Ionicons](https://ionicons.com/) */
+*{
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    box-sizing: border-box;    
+}
+body{
+    background-color: hsl(217, 28%, 15%);
+    color: hsl(0, 0%, 100%);
+    margin: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+}
+
+main{
+   
+    color: hsl(0, 0%, 100%);
+    background-image: url(bg-curvy-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+header{
+    margin-top: 5px;
+    padding: 10px;
+    display: flex;
+    gap: 23cm;
+}
+
+.flex{
+    display: flex;
+    gap: 30px;
+    width: 100%;
+}
+
+.nav-group{
+    display: flex;
+}
+
+.nav{
+    margin: 8px;
+    opacity: 0.5;
+}
+.nav:hover{
+    opacity: 1;
+}
+#ple{
+    padding: 10px;
+   text-align: center;
+}
+.div{
+    padding: 10px;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+}
+.div1{
+    width: 40%;
+    padding: 50px;
+    text-align: center;
+    margin-left: 80px;
+    
+}
+
+button{
+    background-color: hsl(176, 68%, 64%);
+    border-style: none;
+    color: hsl(0, 0%, 100%);
+    opacity: 0.8;
+}
+
+.button{
+   background-color: hsl(176, 68%, 64%);
+   color: hsl(0, 0%, 100%);
+   margin-top: 10px;
+  padding: 10px;
+    padding-left: 1cm;
+    padding-right: 1cm;
+    border-radius: 30px;
+ 
+}
+button:hover{
+    opacity: 1;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.top{
+    display: flex;
+    gap: 50px;
+    padding: 50px;
+}
+
+.bottom{
+    display: flex;
+    gap: 30px;
+    height: 250px;
+    position: relative;
+    margin-left: 80px;
+}
+
+.content{
+    width: 25%;
+    height: 180px;
+    padding: 15px;
+    margin-top: 30px;
+    border-radius: 10px;
+    background-color: hsl(216, 30%, 17%);
+}
+
+.sign{
+    position: absolute;
+    left: 15px;
+   
+}
+
+.float{
+    width: 50%;
+   height: 180px;
+    position: absolute;
+    left: 280px;
+    bottom: 280px;
+    background-color: hsl(215, 31%, 14%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    text-align: center;
+    padding: 30px;
+}
+
+.footer{
+    background-color: hsl(216, 53%, 9%);
+    position: relative;
+    margin-top: 5cm;
+    padding: 60px;
+}
+
+input{
+    width: 60%;
+    padding: 10px;
+    border-radius: 20px;
+    border-style: none;
+}
+
+input::placeholder{
+    opacity: 0.3;
+}
+
+.btn{
+    padding: 10px;
+    border-radius: 20px;
+    border-style: none;
+    margin-left: 8px;
+}
+
+.footer .footer-content{
+    display: flex;
+    gap: 60px;
+}
+
+.footer-content div{
+    width: 25%;
+    padding: 5px;
+}
+
+
+
+ul{
+    list-style: none;
+}
+
+.avatar{
+    vertical-align: middle;
+  width: 60px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+
+
+
+
+
+@media screen and (max-width: 376px) {
+
+    body{
+        max-width: 100%;
+    }
+
+    main {
+        background-image: url(bg-curvy-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+       
+    }
+
+    .logo{
+        width: 80px;
+    }
+
+    header{
+        margin-top: 5px;
+        padding: 5px;
+        display: flex;
+        gap: 10px;
+        
+    }
+    
+    .flex{
+        flex-direction: column;
+        gap: 30px;
+        width: 100%;
+    }
+
+    .img{
+        width: 80%;
+    }
+
+    .div{
+        width: 95%;
+    }
+    .div1{
+        width: 80%;
+        padding: 20px;
+        margin: 0;
+        
+    }
+  
+    .top{
+       flex-direction: column-reverse;
+        gap: 50px;
+        padding: 50px;
+    }
+    
+    .bottom{
+        flex-direction: column;
+        gap: 10px;
+        margin-left: 0;
+    }
+    
+    .content{
+        width: 80%;       
+    }
+    
+    .sign{
+        position: absolute;
+        left: 15px;
+       
+    }
+    
+    .float{
+        width: 80%;
+       height: fit-content;
+        left: 5px;
+        bottom: 550px;
+        padding: 0;
+    }
+    
+    .footer{
+        margin-top: 20cm;
+        padding: 20px;
+    }
+    
+    input{
+        width: 80%;
+        padding: 10px;
+    }
+    
+    .btn{
+        margin-top: 10px;
+    }
+    
+    .footer .footer-content{
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .footer-content div{
+        width: 100%;
+        text-align: center;
+    }
+    
+       
+}
